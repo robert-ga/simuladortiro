@@ -26,9 +26,9 @@ public class TargetShooter : MonoBehaviour
     }
     void Update()
     {
-        //kills();
-        //timer();
-        //precision();
+        kills();
+        timer();
+        precision();
        // regresar();
     }
 
@@ -55,12 +55,12 @@ public class TargetShooter : MonoBehaviour
             if (timeRemaining == 0)
             {
                 timeRemaining = 1;
-                /*conexiondb();
+                conexiondb();
                 IDbCommand cmnd = dbcon.CreateCommand();
                 cmnd.CommandText = "INSERT INTO puntuacion (usuario,kills,precision,tiempo,fecha,id_usuario) VALUES(\'" + recuperar.name + "\',\'" + canti + "\',\'" + precision()+"%" + "\',\'" + timeRemaining + "min" + "\',\'" + fechaa() + "\',\'" + recuperar.idilogin + "\')";
                 cmnd.ExecuteNonQuery();
                 desconexiondb();
-                SceneManager.LoadScene("Estadisticas");*/
+                SceneManager.LoadScene("Estadisticas");
                 //print( timeRemaining+ " " + canti + " " + precision());
             }
             //print("1:30    " + kills() +"   "+ p+"%");
@@ -84,7 +84,7 @@ public class TargetShooter : MonoBehaviour
                     target.Hit();
                     canti++;
                     aciertos.text =canti.ToString();
-                   // regresar();
+                     regresar();
 
                     //print(canti);
                 }

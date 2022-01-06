@@ -18,11 +18,12 @@ public class ControlesJugador : MonoBehaviour
     public float RotationSpeed = 1;
     public Transform tar;
     public float mover = 2f;
+    public Vector2 turn;
 
     void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         
     }
     void Update()
@@ -32,7 +33,7 @@ public class ControlesJugador : MonoBehaviour
         verticalrotation = Mathf.Clamp(verticalrotation, -90f, 90f);
         camara.localEulerAngles = new Vector3(verticalrotation, 0, 0);*/
 
-
+        puntero();
 
         /*float h = horizontalSpeed * Input.GetAxis("Mouse X");
         float v = verticalSpeed * Input.GetAxis("Mouse Y");
@@ -56,5 +57,32 @@ public class ControlesJugador : MonoBehaviour
 
         }*/
 
+    }
+    private void puntero()
+    {
+
+        string msg = File.ReadAllText(@"C:/Users/User/Desktop/opencv/puntero/DatosPuntero.json");
+        print(msg);
+
+
+        if (!File.Exists(msg))
+        {
+
+            string[] coordenadas = msg.Split(';');
+            float x = float.Parse(coordenadas[0])/10;
+            float y = float.Parse(coordenadas[1])/10;
+
+            x += Input.GetAxis("Mouse X");
+            y += Input.GetAxis("Mouse Y");
+            transform.localRotation = Quaternion.Euler(y, x, 0);
+        }
+        else
+        {
+            //string msg = File.ReadAllText(@"C:/Users/User/Desktop/Simulador de Tiro/DetectorDeRostro/DatosSalida.json");
+            File.Create(msg).Dispose();
+        }
+
+
+        
     }
 }

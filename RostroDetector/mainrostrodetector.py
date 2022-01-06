@@ -47,13 +47,24 @@ with mp_face_mesh.FaceMesh(
                     y = normalizedLandmark.y * 10
                     z = normalizedLandmark.z * 10
                     # Rec Final
-                    ax = round(map(X, 2.2, 7.5, -13.36, 6), 1)
-                    ay = round(map(y, 8, 2, 2.8, 6), 1)
-                    az = round(map(z, -0.8, -0.3, 13, -5.1), 1)
-                    # otro
-                    # ax = round(map(X, 2.2, 7.5, -16, 8), 1)
+                    # ax = round(map(X, 2.2, 7.5, -13.36, 6), 1)
                     # ay = round(map(y, 8, 2, 2.8, 6), 1)
                     # az = round(map(z, -0.8, -0.3, 13, -5.1), 1)
+                    # otro
+                    ax = round(map(X, 2.2, 7.5, -16, 8), 1)
+                    ay = round(map(y, 8, 2, 2.8, 6), 1)
+                    az = round(map(z, -0.8, -0.3, 13, -5.1), 1)
+                    # if az<=-3.0:
+                    #     # az=-14
+                    #     print("es 10")
+                    # else:
+                    #     print("no es 10")
+                    # if az>=-0.11 and az>=-0.12:
+                    #     az=-14
+                    #     print("es 25")
+                    # if z>=-0.13:
+                    #     az=-14
+                    #     print("es 10")
                     # pc
                     # ax = round(map(X, 2.2, 7.5, -9.6, 2.5), 1)
                     # ay = round(map(y, 8, 2, 2.8, 6), 1)
@@ -71,7 +82,7 @@ with mp_face_mesh.FaceMesh(
                     ry = str(ay)
                     rz = str(az)
             try:
-                d = open('DatoSalida/DatosSalida.txt', 'w')
+                d = open('DatoSalida/DatosSalida.json', 'w')
                 d.write(rx + ';' + ry + ';' + rz)
                 d.close()
             except:

@@ -12,14 +12,14 @@ public class CamController : MonoBehaviour
 
     void Start()
     {
-        seguimientorostro();
+        //seguimientorostro();
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
         
-        seguimientorostro();
+        //seguimientorostro();
     }
     public void seguimientorostro()
     {

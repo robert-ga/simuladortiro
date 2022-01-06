@@ -261,6 +261,12 @@ MonoBehaviour:
   camara: {fileID: 851940439}
   mousesensi: 1
   centerCam: {fileID: 0}
+  horizontalSpeed: 1
+  verticalSpeed: 1
+  RotationSpeed: 1
+  tar: {fileID: 0}
+  mover: 2
+  turn: {x: 0, y: 0}
 --- !u!4 &483028312
 Transform:
   m_ObjectHideFlags: 0
@@ -268,14 +274,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483028310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.070801094, y: 0, z: 0, w: 0.99749047}
   m_LocalPosition: {x: 3.93, y: 6.21, z: -6.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 851940439}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.12, y: 0, z: 0}
 --- !u!114 &483028313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.97, y: -4.3, z: -5}
+  m_LocalPosition: {x: -3.45, y: -3.37, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 851940439}
